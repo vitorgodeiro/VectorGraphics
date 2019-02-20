@@ -1,0 +1,15 @@
+local rvg = {}
+
+rvg.scene = scene{
+	blur(5.0, {
+		blur(15, fill(circle(125, 125, 30), color.black)),
+		fill(circle(75, 75, 40), color.green),
+		fill(circle(75, 75, 20), color.red)
+	})
+}
+
+rvg.window = window(0,0,200,200)
+
+rvg.viewport = viewport(0,0,200,200)
+
+return rvg

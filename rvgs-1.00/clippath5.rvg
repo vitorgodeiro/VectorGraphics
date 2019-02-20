@@ -1,0 +1,17 @@
+local rvg = {}
+
+rvg.scene = scene{
+    fill(rect(0, 0, 200, 200), color.blue),
+    clip(
+        transform(rotation(20, 100, 100),
+            punch(rect(50, 50, 100, 100))
+        ),
+        fill(rect(0, 0, 200, 200), color.red)
+    )
+}
+
+rvg.window = window(0,0,200,200)
+
+rvg.viewport = viewport(0,0,200,200)
+
+return rvg

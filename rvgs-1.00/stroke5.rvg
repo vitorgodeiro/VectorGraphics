@@ -1,0 +1,15 @@
+local rvg = {}
+
+-- this is a horrible stroke: the centerion head
+local centerion = path{M, 68.4375, 62.91666666666666, C, 64.0625, 38.75, 145.3125, 13.75, 107.8125, 32.91666666666663}
+
+rvg.scene = scene{
+    fill(centerion:scaled(1,-1):translated(0,100):stroked(108), color.blue),
+    fill(centerion:scaled(1,-1):translated(110,260):stroked(108):by(stroke_method.native), color.red)
+}
+
+rvg.window = window(0, 0, 300, 300)
+
+rvg.viewport = viewport(0, 0, 300, 300)
+
+return rvg

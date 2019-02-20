@@ -1,0 +1,46 @@
+local rvg = {}
+
+-- tests degenerate segments
+local s = stroke_style():capped(stroke_cap.triangle):joined(stroke_join.round)
+
+rvg.scene = scene{
+  -- endpoint degenerate
+  fill(path{
+        M,-25,0,
+        L, -25,0, -- degenerate
+        L, 0,25,
+        L, 25,0,
+        L, 25, 0 } -- degenerate
+        :translated(100, 100):stroked(10, s), color.blue),
+  -- double endpoint degenerate
+  fill(path{
+        M,-25,0,
+        L, -25,0, -- degenerate
+        L, -25,0, -- degenerate
+        L, 0,25,
+        L, 25,0,
+        L,25,0, -- degenerate
+        L, 25, 0 } -- degenerate
+        :translated(200, 200):stroked(10, s), color.red),
+  -- internal degenerate
+  fill(path{
+        M,-25,0,
+        L, 0,25,
+        L, 0,25, -- degenerate
+        L, 25,0}
+        :translated(200, 100):stroked(10, s), color.darkgreen),
+  -- double internal degenerate
+  fill(path{
+        M,-25,0,
+        L, 0,25,
+        L, 0,25, -- degenerate
+        L, 0,25, -- degenerate
+        L, 25,0}
+        :translated(100, 200):stroked(10, s), color.orange),
+}
+
+rvg.window = window(0,0,300,300)
+
+rvg.viewport = viewport(0,0,300,300)
+
+return rvg

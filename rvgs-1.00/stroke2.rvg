@@ -1,0 +1,17 @@
+local rvg = {}
+
+-- tests simple dashing
+local s = stroke_style():dashed{6, 6, 12, 6}
+
+rvg.scene = scene{
+  fill(circle(0, 0, 10):scaled(1, 5):translated(100, 100):stroked(3, s), color.red),
+  fill(circle(0, 0, 10):scaled(5, 1):translated(100, 200):stroked(3, s):by(stroke_method.native), color.red),
+  fill(circle(0, 0, 10):stroked(3, s):scaled(1, 5):translated(200, 200), color.blue),
+  fill(circle(0, 0, 10):stroked(3, s):by(stroke_method.native):scaled(5, 1):translated(200, 100), color.blue)
+}
+
+rvg.window = window(0,0,300,300)
+
+rvg.viewport = viewport(0,0,300,300)
+
+return rvg

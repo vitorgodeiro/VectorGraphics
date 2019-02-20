@@ -1,0 +1,17 @@
+local rvg = {}
+
+-- tests caps and degenerate dashes
+local s = stroke_style():dashed{15, 15, 0, 15}
+
+rvg.scene = scene{
+  fill(circle(0, 0, 40):translated(100, 100):stroked(10, s:capped(stroke_cap.square)), color.red),
+  fill(circle(0, 0, 40):translated(100, 200):stroked(10, s:capped(stroke_cap.round)), color.red),
+  fill(circle(0, 0, 40):translated(200, 200):stroked(10, s:capped(stroke_cap.triangle)), color.blue),
+  fill(circle(0, 0, 40):translated(200, 100):stroked(10, s:capped(stroke_cap.fletching)), color.blue)
+}
+
+rvg.window = window(0,0,300,300)
+
+rvg.viewport = viewport(0,0,300,300)
+
+return rvg
