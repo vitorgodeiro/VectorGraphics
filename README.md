@@ -1,5 +1,7 @@
 # Vector Graphics Render
-<img src="https://github.com/vitorgodeiro/VectorGraphics/blob/master/rendered/bunny.png" width="200"> <img src="https://github.com/vitorgodeiro/VectorGraphics/blob/master/rendered/reschart.png" width="200"> <img src="https://github.com/vitorgodeiro/VectorGraphics/blob/master/rendered/drops.png" width="200"> <img src="https://github.com/vitorgodeiro/VectorGraphics/blob/master/rendered/embrace.png" width="200">  
+<p align="center">
+<img src="https://github.com/vitorgodeiro/VectorGraphics/blob/master/rendered/bunny.png" width="200"><img src="https://github.com/vitorgodeiro/VectorGraphics/blob/master/rendered/reschart.png" width="200"><img src="https://github.com/vitorgodeiro/VectorGraphics/blob/master/rendered/drops.png" width="200"><img src="https://github.com/vitorgodeiro/VectorGraphics/blob/master/rendered/embrace.png" width="200">  
+ </p>
 
 The illustrations of Bunny, Reschart, Drops and Embrace took to render 10s, 22s, 454s and 408s respectively.
 
